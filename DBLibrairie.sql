@@ -1,7 +1,6 @@
 --Projet "Librairie" par Atif, Audrey, Emilien, Wissam
 
 USE librairie
---Jean Cultamert :o
 ---------- DESTRUCTION DES FOREIGN--------------------
 -- TABLE PERMISSION
 ALTER TABLE Permission
