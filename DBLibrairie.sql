@@ -1,7 +1,7 @@
 --Projet "Librairie" par Atif, Audrey, Emilien, Wissam
 
 USE librairie
-
+--Jean Cultamert :o
 ---------- DESTRUCTION DES FOREIGN--------------------
 -- TABLE PERMISSION
 ALTER TABLE Permission
@@ -1285,14 +1285,14 @@ VALUES
 INSERT INTO MotClef 
 	(nomMotClef, descriptionMotClef, IDStatutMotClef)
 VALUES
-	('romantisme','wissam le branleur',1),
+	('romantisme','wissam le chauffeur',1),
 	('tragedie','wissam le pti',1),
-	('humour','wissam le con',1),
-	('action','wissam l''enculer',1),
-	('tragedie','wissam le pd',1),
-	('melodrame','wissam le chien',1),
+	('humour','wissam le thon',1),
+	('melodrame','wissam et son chien',1),
 	('guerre','violence, epique, historique',1),
 	('nature','paysages, voyage, écologie',1),
+	('action','wissam arc-en-ciel',1),
+	('tragedie','wissam le pdf',1),
 	('politique','discours, historique, actualité',1),
 	('nouveauté','actualité, sorties, récent',1),
 	('musique','biographie, historique, société',1)
@@ -1546,6 +1546,10 @@ CREATE VIEW VueEmilien
 		ON IDEditeur = IDEditeurLivre
 		JOIN Statut
 		ON IDStatutLivre = IDStatut
+		JOIN Liaison lia
+		ON lia.IDLivreLiaison = IDLivre
+		JOIN MotClef mot
+		ON mot.IDMotClef = lia.IDMotClefLiaison 
 
 --==================================================================================================	
 /*
